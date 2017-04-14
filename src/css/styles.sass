@@ -1,3 +1,5 @@
+#sitepage
+  min-width: 300px
 body
   font: 1em Arial, PTSans
   background: url(https://subtlepatterns.com/patterns/grid.png)
@@ -369,23 +371,28 @@ header, nav, div, dl, dt, dd, a, article
 
 #footer
   background: #000
-  height: 85vh
+  // height: 85vh
   border-top: 5px solid
   position: relative
+  padding-bottom: 20vh
 
 .footer-site-logo
   display: flex
   flex: 1
   order: 2
+  align-items: center
+  justify-content: center
 
 .footer-information
   display: flex
   flex-flow: row wrap
   padding: 20px
-  height: 30%
+  // height: 30%
+  align-items: center
 
 .footer-slider
-  height: 30%
+  // height: 40%
+  height: 40vh
   position: relative
   background: url(https://images.pexels.com/photos/248548/pexels-photo-248548.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) center no-repeat
   background-size: cover
@@ -393,12 +400,10 @@ header, nav, div, dl, dt, dd, a, article
 
 #footer ul
   list-style: none
-  padding: 0
 
 .footer-list
   display: flex
   flex-flow: column
-  flex: 1 1 200px
   order: 1
   padding: 0
   margin: 0 10px
@@ -438,7 +443,7 @@ header, nav, div, dl, dt, dd, a, article
   text-align: right
   position: absolute
   bottom: 0
-  left: calc(50% - 100px)
+  left: 35%
   &:after
     display: block
     content: ''
@@ -489,3 +494,22 @@ header, nav, div, dl, dt, dd, a, article
     font-size: 200%
     &:last-child
       border-bottom: 0
+
+@media screen and (max-width: 850px)
+  #footer
+    background: #000
+    height: auto
+    border-top: 5px solid
+    position: relative
+  .footer-information
+    display: flex
+    flex-flow: column wrap
+  .footer-list
+    padding-bottom: 5px
+    border-bottom: 2px solid #cca
+  .security-list
+    display: none
+  .social-list
+    width: 100vw
+    left: 0
+    box-sizing: border-box
