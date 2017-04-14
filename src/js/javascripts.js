@@ -1,0 +1,1 @@
+alert("he is a life")
